@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Job Application Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <h1>📌 Job Application Tracker</h1>
+
+  <!-- ADD FORM -->
+  <section class="card">
+    <h2>Add Application</h2>
+    <div class="grid">
+      <input id="company" placeholder="Company" />
+      <input id="role" placeholder="Role" />
+      <input id="location" placeholder="Location" />
+      <input type="date" id="date" />
+      <select id="status">
+        <option>Applied</option>
+        <option>OA</option>
+        <option>Interview</option>
+        <option>Offer</option>
+        <option>Rejected</option>
+      </select>
+      <select id="source">
+        <option>Referral</option>
+        <option>Career Page</option>
+        <option>LinkedIn</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <textarea id="notes" placeholder="Notes"></textarea>
+    <button id="addBtn">Add Application</button>
+  </section>
+
+  <!-- FILTER -->
+  <section class="card">
+    <h2>Search & Filter</h2>
+    <div class="grid">
+      <input id="search" placeholder="Search company or role" />
+      <select id="filterStatus">
+        <option>All</option>
+        <option>Applied</option>
+        <option>OA</option>
+        <option>Interview</option>
+        <option>Offer</option>
+        <option>Rejected</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- ANALYTICS -->
+  <section class="card">
+    <h2>Analytics</h2>
+    <div id="analytics" class="analytics"></div>
+  </section>
+
+  <!-- TABLE -->
+  <section class="card">
+    <h2>Applications</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Role</th>
+          <th>Status</th>
+          <th>Applied</th>
+          <th>Last Update</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </section>
+
+  <script src="js/utils.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
